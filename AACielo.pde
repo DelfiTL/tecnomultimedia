@@ -4,7 +4,7 @@
   float posale=random (50,450);
   float H=0;
  int A=0;
- 
+ float tam= random(80,150);
  
  //constructor:
   Cielo(){
@@ -16,7 +16,7 @@
     ellipse (posale, H ,100,30);
   
     imageMode(CENTER); 
-    image (img[A],posale,H,150,130);
+    image (img[A],posale,H,tam,tam);
   }
   void movernube(){
     H=H+1;
