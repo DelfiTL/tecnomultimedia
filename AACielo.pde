@@ -20,11 +20,11 @@
     H=H+1;
   }
      void actualizar(){
-   if (H>=750){
+   if (A<=9 && H>=750){
    A=A+1;
    H=0;
-   }else if (A>=10){
-     A=A-1;
+   }else if (A==9){
+     A=1;
    }
  }
 
