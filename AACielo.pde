@@ -1,9 +1,10 @@
 
 
  class Cielo{ 
-  float posale=random (0,400);
+  float posale=random (50,450);
   float H=0;
-  float H1=0; 
+ int A=0;
+ 
  
  //constructor:
   Cielo(){
@@ -13,13 +14,19 @@
     noStroke();
     ellipseMode(CENTER);
     ellipse (posale, H ,100,30);
-    imageMode(CENTER);
+  
+    imageMode(CENTER); 
     image (img[A],posale,H,150,130);
   }
   void movernube(){
     H=H+1;
   }
      void actualizar(){
+   //     if (A<=0){
+   //A=A+1;
+   //}else if (A==9){
+   //  A=1;
+   //}
    if (A<=9 && H>=750){
    A=A+1;
    H=0;
