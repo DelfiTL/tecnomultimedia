@@ -4,6 +4,7 @@
   float posale=random (0,400);
   float H=0;
   float H1=0; 
+ 
  //constructor:
   Cielo(){
   }
@@ -17,4 +18,14 @@
   }
   void movernube(){
     H=H+1;
-  } }
+  }
+     void actualizar(){
+   if (H>=750){
+   A=A+1;
+   H=0;
+   }else if (A>=10){
+     A=A-1;
+   }
+ }
+
+}
