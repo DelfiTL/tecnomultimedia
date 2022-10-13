@@ -50,15 +50,15 @@ void setup(){
     //fondo
     astronauta= loadImage  ("astronauta1v2.png");
     fondostar = loadImage  ("fondostar.png");
+    // cambio color
       G=232;
-      B=255;
-     
+      B=255;     
 }
 
 void draw (){
  background (0,G,B);
    fondo();   
-  // AACielo
+  //                                    AACielo
  for (int i=0;i<espacio.size(); i++){
    Cielo nubesAux=espacio.get(i);
    nubesAux.movernube();
@@ -71,7 +71,7 @@ void draw (){
    espacio.add (new Cielo());
  }
  }
-// Marciano
+//                                        Marciano
  for (int i=0;i<spacecraft.size(); i++){
    Space naveAux=spacecraft.get(i);
    naveAux.dibujar();
