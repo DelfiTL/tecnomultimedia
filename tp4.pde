@@ -1,3 +1,4 @@
+//https://www.youtube.com/watch?v=mC3QG1lEydQ&ab_channel=TrebinoLlambiasDelfina
 /*TP 4 
 Comision 3. Martes 14 a 16hs
 Profesor: David Bedoian
@@ -5,6 +6,7 @@ Alumnos:
 Delfina Trebino Llambías 79304/9
 Jesús León 91602/3
 */
+
 //fondo
 float G, B;
   //astronauta
@@ -50,28 +52,28 @@ void setup(){
     //fondo
     astronauta= loadImage  ("astronauta1v2.png");
     fondostar = loadImage  ("fondostar.png");
-    // cambio color
       G=232;
-      B=255;     
+      B=255;
+     
 }
 
 void draw (){
  background (0,G,B);
    fondo();   
-  //                                    AACielo
- for (int i=0;i<espacio.size(); i++){
-   Cielo nubesAux=espacio.get(i);
-   nubesAux.movernube();
-   nubesAux.dibujarnubes();
-   nubesAux.actualizar();
+  // AACielo
+ for (int i=0;i<espacio.size(); i++){ //for para utilizar las funciones
+   Cielo planetAux=espacio.get(i); //.get me devuelve el valor del elemento 
+   planetAux.movernube();//planetAux lo utilizo para referirme a un elementos solo
+   planetAux.dibujarnubes();
+   planetAux.actualizar();
  }
- for (int e=0; e<vel; e++){
+ for (int e=0; e<vel; e++){  //for para invocar los elementos
  if ( disparoNuevoElemento<=0){
    disparoNuevoElemento = random(2000,4000);//agregar ls obj cda tantos frames
    espacio.add (new Cielo());
  }
  }
-//                                        Marciano
+// Marciano
  for (int i=0;i<spacecraft.size(); i++){
    Space naveAux=spacecraft.get(i);
    naveAux.dibujar();

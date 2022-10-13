@@ -17,8 +17,8 @@ void drawastronauta() {
   }else if (tama>=300){
     pX-=0.8;
   }
-  if ( pX<=-150){
-     pX=700;
-     tama=0;
+  if (pX<=-150){
+    pX=700;
+    tama=0;
   }
 }
